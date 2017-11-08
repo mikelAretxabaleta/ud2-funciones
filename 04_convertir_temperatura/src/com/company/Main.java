@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.print("Introduce una temperatura en grados centígrados:");
+        System.out.print("Temperatura en grados centígrados:");
         double centigrados = Double.parseDouble(br.readLine());
 
         System.out.println(centigrados + " grados centígrados son " + convertirTemperatura(centigrados) + " Fahrenheit");

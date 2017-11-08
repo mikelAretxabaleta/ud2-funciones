@@ -11,10 +11,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         char opcion;
-        int escala;
+        char escala;
 
         do {
-            System.out.println("=== Temperaturas ===\n" +
+            System.out.print("=== Temperaturas ===\n" +
                     "1. Convertir a Fahrenheit\n" +
                     "2. Convertir a Kelvin\n" +
                     "3. Salir\n" +
@@ -25,13 +25,13 @@ public class Main {
             switch (opcion) {
 
                 case '1':
-                    escala = 1;
+                    escala = 'F';
                     break;
                 case '2':
-                    escala = 2;
+                    escala = 'K';
                     break;
                 default:
-                    escala = -1;
+                    escala = '0';
             }
 
             if (opcion!='3') {
@@ -45,8 +45,8 @@ public class Main {
 
     public static double convertirTemperatura(double centigrados, int escala) {
 
-        if (escala == 1) return (centigrados * 1.8) + 32;
-        else if (escala == 2) return (centigrados + 273.15);
+        if (escala == 'F') return (centigrados * 1.8) + 32;
+        else if (escala == 'K') return (centigrados + 273.15);
         else return -1;
     }
 }
