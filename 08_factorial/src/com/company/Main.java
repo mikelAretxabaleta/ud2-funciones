@@ -12,19 +12,25 @@ public class Main {
         System.out.print("Número: ");
         int numero = Integer.parseInt(br.readLine());
 
-        System.out.println("El factorial es: " + factorial(numero));
+        System.out.println("El factorial iterativo es: " + factorial(numero));
+        System.out.println("El factorial recursivo es: " + recursiva(numero));
     }
 
     public static int factorial(int numero) {
 
-        int factorial=1;
+        int factorial = 1;
         for (int i = numero; i > 1; i--) {
-            factorial=factorial*i;
+            factorial = factorial * i;
         }
         return factorial;
 
-//        if (numero==0) return 1;
-//        int factorial = numero*factorial(numero - 1);
-//        return factorial;
-    }
+    public static int recursiva(int numero)
+
+        if(numero >0)
+            return numero * recursiva(numero -1);
+
+        else return 1;
+
+
+}
 }
