@@ -23,10 +23,11 @@ public class Main {
             factorial = factorial * i;
         }
         return factorial;
+    }
 
-    public static int recursiva(int numero)
+    public static int recursiva(int numero){
 
-        if(numero >0)
+        if (numero >0)
             return numero * recursiva(numero -1);
 
         else return 1;
