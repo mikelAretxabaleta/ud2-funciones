@@ -26,7 +26,7 @@ public class Main {
         if (numero == 0) return 0;
         else if (numero < 0) return -1;
 
-        for (int i = 3; i < numero; i++) {
+        for (int i = 2; i < numero; i++) {
 
             otro = primero;
             primero = segundo;
@@ -38,7 +38,10 @@ public class Main {
     }
 
     private static int recursivo(int numero) {
-        return fibonacci(numero - 1) + fibonacci(numero - 2);
+
+        if (numero == 0) return 0;
+        if (numero == 1) return 1;
+        return recursivo(numero - 1) + recursivo(numero - 2);
     }
 
 }
